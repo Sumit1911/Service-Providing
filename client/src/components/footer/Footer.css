@@ -1,0 +1,11 @@
+.footer-container {
+    background-color: blue;
+    color: white;
+    height: 10vh;
+}
+.footer-container h2 {
+    text-align: center;
+    justify-content: center;
+    font-weight: bold;
+    padding-top: 3.5vh;
+}

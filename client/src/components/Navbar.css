@@ -1,0 +1,19 @@
+
+.container {
+    max-width: 140rem;
+    padding: 4.2rem 4.2rem;
+    display: flex;
+    justify-content: space-between;
+    color: blue;
+}
+.logo-brand a {
+    font-size: 5vh;
+}
+ul {
+    display: flex;
+    gap: 3.1rem;
+}
+li {
+    color: blue;
+    font-size: 3vh;
+}
