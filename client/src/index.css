@@ -162,7 +162,7 @@ a.active {
   }
   .hero-content {
     p {
-      margin: 2.4rem 0 4.8rem 0;
+      margin: 2.4rem 0 1.8rem 0;
       :first-child {
         margin: 0 0 1rem 0;
       }
@@ -178,6 +178,18 @@ a.active {
     }
   }
 }
+.sumit img {
+  border: none;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.about-image img {
+  margin: -10rem 0rem 0rem 8rem;
+}
+
  /***** End Section *****/
 
  /***** analytics section *****/ 

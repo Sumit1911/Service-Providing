@@ -78,8 +78,8 @@ export const Contact = () => {
             <img
               src="/images/support.png"
               alt="support"
-              width="400"
-              height="400"
+              width="450"
+              height="450"
             />
           </div>
           {/* contact form content actual */}

@@ -51,7 +51,7 @@ export const Login = () => {
                 storeTokenInLS(responseData.token);
                 // localStorage.setItem("token", responseData.token);
                 setUser({ email: "", password: "" });
-                // toast.success("Login Successful");
+                toast.success("Login Successful");
                 navigate("/");
               } else {
                 toast.error(responseData.extraDetails ? responseData.extraDetails: responseData.message);

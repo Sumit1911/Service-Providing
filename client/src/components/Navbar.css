@@ -9,6 +9,9 @@
 .logo-brand a {
     font-size: 5vh;
 }
+.heading {
+    color: blueviolet;
+}
 ul {
     display: flex;
     gap: 3.1rem;
