@@ -1,11 +1,11 @@
 require('dotenv').config();
 const express = require("express");
 const cors = require("cors");
+const app = express();
 const authRoute = require("./router/auth-router");
 const contactRoute = require("./router/contact-router");
 const serviceRoute = require("./router/service-router");
-const app = express();
-
+const adminRoute = require("./router/admin-router");
 const connectDb = require("./utils/db");
 const errorMiddleware = require("./middlewares/error-middleware");
 
@@ -26,6 +26,9 @@ app.use(express.json());  //we can use json in this application. it is a middlew
 app.use("/api/auth", authRoute);
 app.use("/api/form", contactRoute);
 app.use("/api/data", serviceRoute);
+
+//let's define admin route
+app.use("/api/admin", adminRoute);
 
 app.use(errorMiddleware);  //define before going to live
 

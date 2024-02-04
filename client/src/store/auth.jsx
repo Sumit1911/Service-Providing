@@ -13,12 +13,16 @@ export const AuthProvider = ({children}) => {
     const [token, setToken] = useState(localStorage.getItem("token"));
     const [user, setUser] = useState("");
     const [services, setServices] = useState([]);
+    const authorizationToken = `Bearer ${token}`;
+
+    const API = "http://localhost:5000";
 
 
     const storeTokenInLS = (serverToken) => { //now in other page we can pass this function(it become reusable function)
         setToken(serverToken); //recent change
         return localStorage.setItem("token", serverToken);
     }; 
+    // console.log(`token ${token}`);
 
     let isLoggedIn = !!token; //token value true then isLoggedIn will true, if token is not available then false;
 
@@ -35,7 +39,7 @@ export const AuthProvider = ({children}) => {
         const response = await fetch("http://localhost:5000/api/auth/user", 
             {method: "GET",
             headers: {
-                Authorization:`Bearer ${token}`,}
+                Authorization:authorizationToken,},
             });
 
             if(response.ok) {
@@ -69,7 +73,16 @@ export const AuthProvider = ({children}) => {
    }, []);
 
     return (
-        <AuthContext.Provider value={{isLoggedIn, storeTokenInLS, LogoutUser, user, services}}>
+        <AuthContext.Provider 
+          value={{
+            isLoggedIn, 
+            storeTokenInLS, 
+            LogoutUser, 
+            user, 
+            services, 
+            authorizationToken,
+            API,
+            }}>
             {children}
         </AuthContext.Provider>
     );
